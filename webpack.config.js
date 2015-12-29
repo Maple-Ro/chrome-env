@@ -5,9 +5,7 @@ module.exports = {
   entry : './libs/index' ,
   output : {
     path : './dist' ,
-    filename : 'chrome.js' ,
-    library : 'chrome' ,
-    libraryTarget : 'umd'
+    filename : 'chrome.js'
   } ,
   module : {
     loaders : [
