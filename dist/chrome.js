@@ -1,20 +1,10 @@
 /*!
- * chrome.js v0.0.2
+ * chrome.js v0.0.3
  * https://github.com/lmk123/chrome-env
  * Copyright 2015 Milk Lee <me@limingkai.cn> (http://www.limingkai.cn/)
  * Licensed under MIT
  */
-(function webpackUniversalModuleDefinition(root, factory) {
-	if(typeof exports === 'object' && typeof module === 'object')
-		module.exports = factory();
-	else if(typeof define === 'function' && define.amd)
-		define([], factory);
-	else if(typeof exports === 'object')
-		exports["chrome"] = factory();
-	else
-		root["chrome"] = factory();
-})(this, function() {
-return /******/ (function(modules) { // webpackBootstrap
+/******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
 /******/
@@ -61,14 +51,14 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
-
+	
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
 	exports.default = undefined;
-
+	
 	var _chrome = __webpack_require__(1);
-
+	
 	Object.defineProperty(exports, 'default', {
 	  enumerable: true,
 	  get: function get() {
@@ -90,125 +80,117 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	__webpack_require__(15);
 
-	module.exports = exports['default'];
-
 /***/ },
 /* 1 */
 /***/ function(module, exports) {
 
 	"use strict";
-
+	
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
 	exports.default = window.chrome = {};
-	module.exports = exports['default'];
 
 /***/ },
 /* 2 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
-
+	
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-
+	
 	var _chrome = __webpack_require__(1);
-
+	
 	var _chrome2 = _interopRequireDefault(_chrome);
-
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
+	
 	exports.default = _chrome2.default.browserAction = {
 	  setBadgeText: function setBadgeText() {}
 	}; /**
 	    * @see https://developer.chrome.com/extensions/browserAction
 	    */
 
-	module.exports = exports['default'];
-
 /***/ },
 /* 3 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
-
+	
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-
+	
 	var _chrome = __webpack_require__(1);
-
+	
 	var _chrome2 = _interopRequireDefault(_chrome);
-
+	
 	var _Event = __webpack_require__(4);
-
+	
 	var _Event2 = _interopRequireDefault(_Event);
-
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
+	
 	/**
 	 * @see https://developer.chrome.com/extensions/browserAction
 	 */
-
+	
 	exports.default = _chrome2.default.commands = {
 	  onCommand: new _Event2.default()
 	};
-	module.exports = exports['default'];
 
 /***/ },
 /* 4 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
-
+	
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-
+	
 	var _classCallCheck2 = __webpack_require__(5);
-
+	
 	var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
-
+	
 	var _createClass2 = __webpack_require__(6);
-
+	
 	var _createClass3 = _interopRequireDefault(_createClass2);
-
+	
 	var _chrome = __webpack_require__(1);
-
+	
 	var _chrome2 = _interopRequireDefault(_chrome);
-
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
+	
 	exports.default = _chrome2.default.Event = (function () {
 	  function _class() {
 	    (0, _classCallCheck3.default)(this, _class);
 	  }
-
+	
 	  (0, _createClass3.default)(_class, [{
-	    key: 'addEventListener',
-	    value: function addEventListener() {}
+	    key: 'addListener',
+	    value: function addListener() {}
 	  }]);
 	  return _class;
 	})(); /**
-	       * @see https://developer.chrome.com/apps/events
+	       * @see https://developer.chrome.com/apps/events#type-Event
 	       */
-
-	module.exports = exports['default'];
 
 /***/ },
 /* 5 */
 /***/ function(module, exports) {
 
 	"use strict";
-
+	
 	exports.default = function (instance, Constructor) {
 	  if (!(instance instanceof Constructor)) {
 	    throw new TypeError("Cannot call a class as a function");
 	  }
 	};
-
+	
 	exports.__esModule = true;
 
 /***/ },
@@ -216,13 +198,13 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
-
+	
 	var _defineProperty = __webpack_require__(7);
-
+	
 	var _defineProperty2 = _interopRequireDefault(_defineProperty);
-
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
+	
 	exports.default = (function () {
 	  function defineProperties(target, props) {
 	    for (var i = 0; i < props.length; i++) {
@@ -233,14 +215,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	      (0, _defineProperty2.default)(target, descriptor.key, descriptor);
 	    }
 	  }
-
+	
 	  return function (Constructor, protoProps, staticProps) {
 	    if (protoProps) defineProperties(Constructor.prototype, protoProps);
 	    if (staticProps) defineProperties(Constructor, staticProps);
 	    return Constructor;
 	  };
 	})();
-
+	
 	exports.__esModule = true;
 
 /***/ },
@@ -281,63 +263,62 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
-
+	
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-
+	
 	var _chrome = __webpack_require__(1);
-
+	
 	var _chrome2 = _interopRequireDefault(_chrome);
-
+	
 	var _Event = __webpack_require__(4);
-
+	
 	var _Event2 = _interopRequireDefault(_Event);
-
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
+	
 	/**
 	 * @see https://developer.chrome.com/extensions/contextMenus
 	 */
-
+	
 	exports.default = _chrome2.default.contextMenus = {
 	  onClicked: new _Event2.default()
 	};
-	module.exports = exports['default'];
 
 /***/ },
 /* 11 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
-
+	
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-
+	
 	var _chrome = __webpack_require__(1);
-
+	
 	var _chrome2 = _interopRequireDefault(_chrome);
-
+	
 	var _Port = __webpack_require__(12);
-
+	
 	var _Port2 = _interopRequireDefault(_Port);
-
+	
 	var _Event = __webpack_require__(4);
-
+	
 	var _Event2 = _interopRequireDefault(_Event);
-
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
+	
 	exports.default = _chrome2.default.runtime = {
 	  id: 'chrome-env',
 	  lastError: null, // or {message:'error message'}
-
+	
 	  getManifest: function getManifest() {},
 	  connect: function connect() {
 	    return new _Port2.default();
 	  },
-
+	
 	  onConnect: new _Event2.default(),
 	  onConnectExternal: new _Event2.default(),
 	  onInstalled: new _Event2.default()
@@ -345,41 +326,39 @@ return /******/ (function(modules) { // webpackBootstrap
 	    * @see https://developer.chrome.com/extensions/runtime
 	    */
 
-	module.exports = exports['default'];
-
 /***/ },
 /* 12 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
-
+	
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-
+	
 	var _classCallCheck2 = __webpack_require__(5);
-
+	
 	var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
-
+	
 	var _createClass2 = __webpack_require__(6);
-
+	
 	var _createClass3 = _interopRequireDefault(_createClass2);
-
+	
 	var _Event = __webpack_require__(4);
-
+	
 	var _Event2 = _interopRequireDefault(_Event);
-
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
+	
 	var _class = (function () {
 	  function _class() {
 	    (0, _classCallCheck3.default)(this, _class);
-
+	
 	    this.name = 'xxx';
 	    this.onDisconnect = new _Event2.default();
 	    this.onMessage = new _Event2.default();
 	  }
-
+	
 	  (0, _createClass3.default)(_class, [{
 	    key: 'postMessage',
 	    value: function postMessage() {}
@@ -391,79 +370,77 @@ return /******/ (function(modules) { // webpackBootstrap
 	})(); /**
 	       * @see https://developer.chrome.com/extensions/runtime#type-Port
 	       */
-
+	
 	exports.default = _class;
 	;
-	module.exports = exports['default'];
 
 /***/ },
 /* 13 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
-
+	
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-
+	
 	var _chrome = __webpack_require__(1);
-
+	
 	var _chrome2 = _interopRequireDefault(_chrome);
-
+	
 	var _StorageArea = __webpack_require__(14);
-
+	
 	var _StorageArea2 = _interopRequireDefault(_StorageArea);
-
+	
 	var _Event = __webpack_require__(4);
-
+	
 	var _Event2 = _interopRequireDefault(_Event);
-
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
+	
 	var sync = new _StorageArea2.default();
-
+	
 	var local = new _StorageArea2.default();
-
+	
 	var managed = new _StorageArea2.default();
-
+	
 	exports.default = _chrome2.default.storage = {
 	  sync: sync,
 	  local: local,
 	  managed: managed,
-
+	
 	  onChanged: new _Event2.default()
 	};
-	module.exports = exports['default'];
 
 /***/ },
 /* 14 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
-
+	
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-
+	
 	var _classCallCheck2 = __webpack_require__(5);
-
+	
 	var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
-
+	
 	var _createClass2 = __webpack_require__(6);
-
+	
 	var _createClass3 = _interopRequireDefault(_createClass2);
-
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
+	
 	/**
 	 * @see https://developer.chrome.com/extensions/storage#type-StorageArea
 	 */
-
+	
 	var _class = (function () {
 	  function _class() {
 	    (0, _classCallCheck3.default)(this, _class);
 	  }
-
+	
 	  (0, _createClass3.default)(_class, [{
 	    key: "get",
 	    value: function get() {}
@@ -484,48 +461,43 @@ return /******/ (function(modules) { // webpackBootstrap
 	})();
 
 	exports.default = _class;
-	module.exports = exports['default'];
 
 /***/ },
 /* 15 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
-
+	
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-
+	
 	var _chrome = __webpack_require__(1);
-
+	
 	var _chrome2 = _interopRequireDefault(_chrome);
-
+	
 	var _Port = __webpack_require__(12);
-
+	
 	var _Port2 = _interopRequireDefault(_Port);
-
+	
 	var _Event = __webpack_require__(4);
-
+	
 	var _Event2 = _interopRequireDefault(_Event);
-
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
+	
 	exports.default = _chrome2.default.tabs = {
 	  query: function query() {},
 	  connect: function connect() {
 	    return new _Port2.default();
 	  },
-
+	
 	  onUpdated: new _Event2.default(),
 	  onActivated: new _Event2.default()
 	}; /**
 	    * @see https://developer.chrome.com/extensions/tabs
 	    */
 
-	module.exports = exports['default'];
-
 /***/ }
-/******/ ])
-});
-;
+/******/ ]);
 //# sourceMappingURL=chrome.js.map

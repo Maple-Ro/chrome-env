@@ -1,6 +1,6 @@
 {
   "name": "chrome-env",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Proived an Chrome App/Extension environment for unit tests goal.",
   "scripts": {
     "webpack": "webpack"
