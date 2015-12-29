@@ -2,11 +2,11 @@ const pkg = require( './package.json' );
 const webpack = require( 'webpack' );
 
 module.exports = {
-  entry : './libs/chrome' ,
+  entry : './libs/index' ,
   output : {
     path : './dist' ,
     filename : 'chrome.js' ,
-    library : 'Chrome' ,
+    library : 'chrome' ,
     libraryTarget : 'umd'
   } ,
   module : {

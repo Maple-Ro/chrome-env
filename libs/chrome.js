@@ -1,1 +1,1 @@
-const x = 'x';
+export default {};
