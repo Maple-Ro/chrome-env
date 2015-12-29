@@ -1,14 +1,19 @@
 {
   "name": "chrome-env",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Proived an Chrome App/Extension environment for unit tests goal.",
   "scripts": {
     "webpack": "webpack"
   },
-  "main": "./libs/chrome.js",
+  "main": "./libs/index.js",
   "files": [
     "dist",
     "libs"
+  ],
+  "keywords": [
+    "chrome",
+    "unit test",
+    "mock"
   ],
   "devDependencies": {
     "babel-core": "^6.3.15",
