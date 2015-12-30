@@ -6,6 +6,7 @@ import './Event';
 import './runtime';
 import './storage';
 import './tabs';
+import './tts';
 
 // 加载类型
 import './types/Port';

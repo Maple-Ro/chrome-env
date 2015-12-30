@@ -8,10 +8,11 @@ import ChromeEvent from './Event';
 
 export default chrome.tabs = {
   query () {} ,
+  sendMessage() {} ,
   connect() {
     return new Port();
   } ,
 
-  onUpdated : new ChromeEvent(),
+  onUpdated : new ChromeEvent() ,
   onActivated : new ChromeEvent()
 };
