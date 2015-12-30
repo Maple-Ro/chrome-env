@@ -11,6 +11,7 @@ export default chrome.runtime = {
   lastError : null , // or {message:'error message'}
 
   getManifest() {} ,
+  requestUpdateCheck() {} ,
   connect() {
     return new Port();
   } ,
