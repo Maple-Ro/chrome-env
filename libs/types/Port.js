@@ -1,17 +1,17 @@
 /**
  * @see https://developer.chrome.com/extensions/runtime#type-Port
  */
-import ChromeEvent from '../Event';
-import types from '../__types';
+var ChromeEvent = require('../Event')
+var types = require('../__types')
+var noop = require('../__noop')
 
-export default types.Port = class {
-  constructor() {
-    this.name = 'xxx';
-    this.onDisconnect = new ChromeEvent();
-    this.onMessage = new ChromeEvent();
-  }
+module.exports = types.Port = Port
 
-  postMessage() {}
+function Port () {
+  this.name = 'xxx'
+  this.onDisconnect = new ChromeEvent()
+  this.onMessage = new ChromeEvent()
+}
 
-  disconnect() {}
-};
+Port.prototype.postMessage = noop
+Port.prototype.disconnect = noop

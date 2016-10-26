@@ -1,17 +1,11 @@
-import chrome from './chrome';
-import StorageArea from './types/StorageArea';
-import ChromeEvent from './Event';
+var chrome = require('./chrome')
+var StorageArea = require('./types/StorageArea')
+var ChromeEvent = require('./Event')
 
-const sync = new StorageArea();
+module.exports = chrome.storage = {
+  sync: new StorageArea(),
+  local: new StorageArea(),
+  managed: new StorageArea(),
 
-const local = new StorageArea();
-
-const managed = new StorageArea();
-
-export default chrome.storage = {
-  sync ,
-  local ,
-  managed ,
-
-  onChanged : new ChromeEvent()
-};
+  onChanged: new ChromeEvent()
+}

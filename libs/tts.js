@@ -2,8 +2,9 @@
  * @see https://developer.chrome.com/extensions/tts
  */
 
-import chrome from './chrome';
+var chrome = require('./chrome')
+var noop = require('./__noop')
 
-export default chrome.tts = {
-  getVoices() {}
-};
+module.exports = chrome.tts = {
+  getVoices: noop
+}

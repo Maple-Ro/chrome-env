@@ -2,10 +2,10 @@
  * @see https://developer.chrome.com/apps/events#type-Event
  */
 
-import chrome from './chrome';
+var chrome = require('./chrome')
+var noop = require('./__noop')
 
-export default chrome.Event = class {
-  constructor() {}
+module.exports = chrome.Event = ChromeEvent
 
-  addListener() {}
-};
+function ChromeEvent () {}
+ChromeEvent.prototype.addListener = noop

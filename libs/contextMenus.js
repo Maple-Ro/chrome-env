@@ -2,11 +2,9 @@
  * @see https://developer.chrome.com/extensions/contextMenus
  */
 
-import chrome from './chrome';
-import ChromeEvent from './Event';
+var chrome = require('./chrome')
+var ChromeEvent = require('./Event')
 
-export default chrome.contextMenus = {
-  onClicked : new ChromeEvent()
-};
-
-
+module.exports = chrome.contextMenus = {
+  onClicked: new ChromeEvent()
+}
