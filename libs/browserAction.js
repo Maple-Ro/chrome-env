@@ -2,8 +2,9 @@
  * @see https://developer.chrome.com/extensions/browserAction
  */
 
-import chrome from './chrome';
+var chrome = require('./chrome')
+var noop = require('./__noop')
 
-export default chrome.browserAction = {
-  setBadgeText() {}
-};
+module.exports = chrome.browserAction = {
+  setBadgeText: noop
+}

@@ -1,1 +1,1 @@
-export default window.chrome = {};
+module.exports = window.chrome = {}

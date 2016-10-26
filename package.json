@@ -1,9 +1,12 @@
 {
   "name": "chrome-env",
-  "version": "0.0.6",
+  "version": "0.1.0",
   "description": "Proived an Chrome App/Extension environment for unit tests goal.",
   "scripts": {
-    "webpack": "webpack"
+    "dev": "webpack --watch",
+    "build": "webpack -p",
+    "lint": "eslint --ignore-pattern '/dist/' \"**/*.js\"",
+    "prepublish": "npm run build"
   },
   "main": "./libs/index.js",
   "files": [
@@ -16,20 +19,20 @@
     "mock"
   ],
   "devDependencies": {
-    "babel-core": "^6.3.15",
-    "babel-loader": "^6.2.0",
-    "babel-plugin-transform-runtime": "^6.3.13",
-    "babel-preset-es2015": "^6.3.13",
-    "webpack": "^1.12.9"
+    "webpack": "1.13.2",
+    "eslint": "3.8.1",
+    "eslint-config-standard": "6.2.0",
+    "eslint-plugin-promise": "3.3.0",
+    "eslint-plugin-standard": "2.0.1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lmk123/chrome-env.git"
+    "url": "git+https://github.com/Selection-Translator/chrome-env.git"
   },
   "author": "Milk Lee <me@limingkai.cn> (http://www.limingkai.cn/)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/lmk123/chrome-env/issues"
+    "url": "https://github.com/Selection-Translator/chrome-env/issues"
   },
-  "homepage": "https://github.com/lmk123/chrome-env"
+  "homepage": "https://github.com/Selection-Translator/chrome-env"
 }

@@ -2,10 +2,10 @@
  * @see https://developer.chrome.com/extensions/browserAction
  */
 
-import chrome from './chrome';
-import ChromeEvent from './Event';
+var chrome = require('./chrome')
+var ChromeEvent = require('./Event')
 
-export default chrome.commands = {
-  onCommand : new ChromeEvent()
-};
+module.exports = chrome.commands = {
+  onCommand: new ChromeEvent()
+}
 

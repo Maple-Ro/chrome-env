@@ -2,17 +2,18 @@
  * @see https://developer.chrome.com/extensions/tabs
  */
 
-import chrome from './chrome';
-import Port from './types/Port';
-import ChromeEvent from './Event';
+var chrome = require('./chrome')
+var Port = require('./types/Port')
+var ChromeEvent = require('./Event')
+var noop = require('./__noop')
 
-export default chrome.tabs = {
-  query () {} ,
-  sendMessage() {} ,
-  connect() {
-    return new Port();
-  } ,
+module.exports = chrome.tabs = {
+  query: noop,
+  sendMessage: noop,
+  connect: function () {
+    return new Port()
+  },
 
-  onUpdated : new ChromeEvent() ,
-  onActivated : new ChromeEvent()
-};
+  onUpdated: new ChromeEvent(),
+  onActivated: new ChromeEvent()
+}
