@@ -1,7 +1,7 @@
 # chrome-env
 
 [![dependencies Status](https://img.shields.io/david/Selection-Translator/chrome-env.svg?style=flat-square)](https://david-dm.org/Selection-Translator/chrome-env)
-[![devDependencies Status](https://img.shields.io/david/dev/Selection-Translator/chrome-env.svg?style=flat-square)](https://david-dm.org/Selection-Translator/chrome-env#info=devDependencies)
+[![devDependencies Status](https://img.shields.io/david/dev/Selection-Translator/chrome-env.svg?style=flat-square)](https://david-dm.org/Selection-Translator/chrome-env?type=dev)
 [![NPM Version](https://img.shields.io/npm/v/chrome-env.svg?style=flat-square)](https://www.npmjs.com/package/chrome-env)
 
 chrome-env 的目标是给单元测试环境（例如 Karma）提供一个在 Chrome 应用/扩展程序中才有的 `chrome` 对象。
